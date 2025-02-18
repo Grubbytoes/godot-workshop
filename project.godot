@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/tutorial_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Sprites/icon.svg"
 
+[dotnet]
+
+project/assembly_name="Godot Workshop 2025"
+
 [input]
 
 ui_left={
