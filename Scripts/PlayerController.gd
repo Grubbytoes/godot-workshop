@@ -2,8 +2,8 @@ extends RigidBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
-@export var move_speed = 50
-@export var jump_height = 200
+@export var move_speed = 1000
+@export var jump_height = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

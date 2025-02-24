@@ -8,8 +8,8 @@
 friction = 0.2
 rough = true
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dckyr"]
-size = Vector2(127, 127)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1y486"]
+height = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwcge"]
 atlas = ExtResource("2_bnp0o")
@@ -188,20 +188,17 @@ animations = [{
 [node name="Player" type="RigidBody2D"]
 texture_filter = 3
 physics_material_override = SubResource("PhysicsMaterial_t5aot")
-gravity_scale = 2.0
 lock_rotation = true
-linear_damp = 3.0
+linear_damp = 5.0
 script = ExtResource("1_36mi8")
-move_speed = 3100
-jump_height = 1600
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 0.5)
-shape = SubResource("RectangleShape2D_dckyr")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_1y486")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(4, 4)
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_6i3eo")
-animation = &"run"
-frame_progress = 0.592936
+animation = &"idle"
+frame_progress = 0.273474

@@ -3,15 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://mek7wesuqm7w" path="res://sprites/Terrain/Terrain (16x16).png" id="1_lhnto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcmvf"]
-size = Vector2(64, 64)
+size = Vector2(16, 16)
 
 [node name="Block" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
 texture = ExtResource("1_lhnto")
+centered = false
 region_enabled = true
 region_rect = Rect2(272, 144, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_jcmvf")

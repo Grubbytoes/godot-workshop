@@ -1,38 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://b47iobt2pfncm"]
+[gd_scene load_steps=3 format=3 uid="uid://b47iobt2pfncm"]
 
-[ext_resource type="Texture2D" uid="uid://bx45g36mj0kbu" path="res://sprites/icon.svg" id="1_maen4"]
 [ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="2_bsrre"]
 [ext_resource type="PackedScene" uid="uid://dfn4lqtmpdfql" path="res://Scenes/Prefabs/block.tscn" id="3_m4con"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0ms6"]
-size = Vector2(1182, 33)
 
 [node name="Scene" type="Node2D"]
 texture_filter = 1
 
-[node name="Floor" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(571, 632)
-shape = SubResource("RectangleShape2D_s0ms6")
-
-[node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(568, 652)
-scale = Vector2(9.23438, 0.71875)
-texture = ExtResource("1_maen4")
-
-[node name="Player" parent="." instance=ExtResource("2_bsrre")]
-position = Vector2(445, 240)
-move_speed = 3500
-
-[node name="Player2" parent="." instance=ExtResource("2_bsrre")]
-position = Vector2(856, 190)
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(4, 4)
 
 [node name="Block" parent="." instance=ExtResource("3_m4con")]
-position = Vector2(670, 456)
+position = Vector2(112, 144)
 
 [node name="Block2" parent="." instance=ExtResource("3_m4con")]
-position = Vector2(777, 533)
+position = Vector2(128, 144)
 
 [node name="Block3" parent="." instance=ExtResource("3_m4con")]
-position = Vector2(926, 461)
+position = Vector2(144, 144)
+
+[node name="Block4" parent="." instance=ExtResource("3_m4con")]
+position = Vector2(160, 144)
+
+[node name="Block5" parent="." instance=ExtResource("3_m4con")]
+position = Vector2(176, 144)
+
+[node name="Player" parent="." instance=ExtResource("2_bsrre")]
+position = Vector2(152, 128)
