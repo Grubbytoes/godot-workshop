@@ -185,7 +185,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" groups=["player_pickup"]]
 texture_filter = 3
 physics_material_override = SubResource("PhysicsMaterial_t5aot")
 lock_rotation = true

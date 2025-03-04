@@ -19,6 +19,10 @@ config/icon="res://Sprites/icon.svg"
 
 project/assembly_name="Godot Workshop 2025"
 
+[global_group]
+
+player_pickup=""
+
 [input]
 
 ui_left={
