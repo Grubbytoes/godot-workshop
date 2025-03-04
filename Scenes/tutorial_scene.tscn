@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://mek7wesuqm7w" path="res://sprites/Terrain/Terrain (16x16).png" id="1_lvyvg"]
 [ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="2_bsrre"]
-[ext_resource type="PackedScene" uid="uid://cbadpp6mi030x" path="res://Scenes/Prefabs/collectable_watermelon.tscn" id="3_hcxbc"]
-[ext_resource type="PackedScene" uid="uid://d1ay7tq6rx2j8" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_s6knh"]
+[ext_resource type="PackedScene" path="res://Scenes/Prefabs/collectable_watermelon.tscn" id="3_hcxbc"]
+[ext_resource type="PackedScene" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_s6knh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cviv"]
 texture = ExtResource("1_lvyvg")
