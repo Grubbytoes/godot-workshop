@@ -1,12 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://fh7fiewb7x8i"]
+[gd_scene load_steps=29 format=3 uid="uid://fh7fiewb7x8i"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_36mi8"]
 [ext_resource type="Texture2D" uid="uid://58r8jwp6tkk8" path="res://sprites/Main Characters/Pink Man/Idle (32x32).png" id="2_bnp0o"]
 [ext_resource type="Texture2D" uid="uid://bt86m000tap58" path="res://sprites/Main Characters/Pink Man/Run (32x32).png" id="3_eexvw"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t5aot"]
-friction = 0.2
-rough = true
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1y486"]
 height = 26.0
@@ -185,11 +181,9 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Player" type="RigidBody2D" groups=["player_pickup"]]
+[node name="Player" type="CharacterBody2D" groups=["player_pickup"]]
 texture_filter = 3
-physics_material_override = SubResource("PhysicsMaterial_t5aot")
-lock_rotation = true
-linear_damp = 5.0
+position = Vector2(-1, 0)
 script = ExtResource("1_36mi8")
 metadata/_edit_group_ = true
 
