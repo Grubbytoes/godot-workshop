@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://dblmiqr32jkgv"
+path="res://.godot/imported/Red Particle.png-05663f86b98d6f338bcafaedc05d3307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Skull/Red Particle.png"
+dest_files=["res://.godot/imported/Red Particle.png-05663f86b98d6f338bcafaedc05d3307.ctex"]
 
 [params]
 

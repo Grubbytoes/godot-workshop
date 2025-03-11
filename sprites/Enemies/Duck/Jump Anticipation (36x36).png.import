@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://chvjqphau8irk"
+path="res://.godot/imported/Jump Anticipation (36x36).png-7312030fd3a9c8d9abb6a69162a800fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Duck/Jump Anticipation (36x36).png"
+dest_files=["res://.godot/imported/Jump Anticipation (36x36).png-7312030fd3a9c8d9abb6a69162a800fc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://c84bmkfpvnosy"
+path="res://.godot/imported/Ceiling In (46x30).png-8517f3c316ab02389f02d3c74472f15a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Bat/Ceiling In (46x30).png"
+dest_files=["res://.godot/imported/Ceiling In (46x30).png-8517f3c316ab02389f02d3c74472f15a.ctex"]
 
 [params]
 

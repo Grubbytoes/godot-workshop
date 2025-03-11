@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://brep727l8t7q"
+path="res://.godot/imported/Idle (36x34).png-fb569143729b3af5269a5e130e01156a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Bee/Idle (36x34).png"
+dest_files=["res://.godot/imported/Idle (36x34).png-fb569143729b3af5269a5e130e01156a.ctex"]
 
 [params]
 

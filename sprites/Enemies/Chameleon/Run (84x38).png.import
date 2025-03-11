@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://cfqmdcvybqwau"
+path="res://.godot/imported/Run (84x38).png-0529181e9eae4c0eb13ea1f6d8f12928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Chameleon/Run (84x38).png"
+dest_files=["res://.godot/imported/Run (84x38).png-0529181e9eae4c0eb13ea1f6d8f12928.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://vm4cvjog30y3"
+path="res://.godot/imported/Rock1_Idle (38x34).png-8c4e423d07c7c4c8252cf78f925d516e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Rocks/Rock1_Idle (38x34).png"
+dest_files=["res://.godot/imported/Rock1_Idle (38x34).png-8c4e423d07c7c4c8252cf78f925d516e.ctex"]
 
 [params]
 

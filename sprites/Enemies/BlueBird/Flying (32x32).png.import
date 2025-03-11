@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://l6k11c735vlx"
+path="res://.godot/imported/Flying (32x32).png-3f5d4e71a8f2066ce0d4f5a607643b1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/BlueBird/Flying (32x32).png"
+dest_files=["res://.godot/imported/Flying (32x32).png-3f5d4e71a8f2066ce0d4f5a607643b1b.ctex"]
 
 [params]
 

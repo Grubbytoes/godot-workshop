@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://dx8qmug8c47t0"
+path="res://.godot/imported/Walk (38x24).png-8c9b660a9d6f8b01381592b7ef3e3b9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Snail/Walk (38x24).png"
+dest_files=["res://.godot/imported/Walk (38x24).png-8c9b660a9d6f8b01381592b7ef3e3b9b.ctex"]
 
 [params]
 

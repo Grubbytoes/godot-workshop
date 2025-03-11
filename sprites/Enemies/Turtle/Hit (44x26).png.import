@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://ctcyuv7tm6oyj"
+path="res://.godot/imported/Hit (44x26).png-956960368f633f8f8518eb46fbecaf09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Turtle/Hit (44x26).png"
+dest_files=["res://.godot/imported/Hit (44x26).png-956960368f633f8f8518eb46fbecaf09.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://fgkvpkln1qua"
+path="res://.godot/imported/Idle (36x36).png-0aa89178df97555133e20e8361072882.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Duck/Idle (36x36).png"
+dest_files=["res://.godot/imported/Idle (36x36).png-0aa89178df97555133e20e8361072882.ctex"]
 
 [params]
 

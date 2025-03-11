@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://ce78a4ldev3v3"
+path="res://.godot/imported/Shell Wall Hit (38x24).png-2af3d69f84e364312a9f71bc9676ac64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Snail/Shell Wall Hit (38x24).png"
+dest_files=["res://.godot/imported/Shell Wall Hit (38x24).png-2af3d69f84e364312a9f71bc9676ac64.ctex"]
 
 [params]
 

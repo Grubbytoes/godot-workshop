@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://yaek2nsmhkbq"
+path="res://.godot/imported/Hit Wall 2 (52x54).png-a9271b41c97a77cf4c910c37d69d4892.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Skull/Hit Wall 2 (52x54).png"
+dest_files=["res://.godot/imported/Hit Wall 2 (52x54).png-a9271b41c97a77cf4c910c37d69d4892.ctex"]
 
 [params]
 

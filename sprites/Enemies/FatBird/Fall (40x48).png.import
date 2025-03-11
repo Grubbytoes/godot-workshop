@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://c681epfrkhyh3"
+path="res://.godot/imported/Fall (40x48).png-3a60dd130612f63d90e9f0cc48ee6f9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/FatBird/Fall (40x48).png"
+dest_files=["res://.godot/imported/Fall (40x48).png-3a60dd130612f63d90e9f0cc48ee6f9a.ctex"]
 
 [params]
 

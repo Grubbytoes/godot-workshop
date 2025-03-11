@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://chrdphn6js5i4"
+path="res://.godot/imported/Rock2_Run (32x28).png-73d09c039c6ad82fd5dfd72d46b28856.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Rocks/Rock2_Run (32x28).png"
+dest_files=["res://.godot/imported/Rock2_Run (32x28).png-73d09c039c6ad82fd5dfd72d46b28856.ctex"]
 
 [params]
 

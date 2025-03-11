@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgw78hojv2idr"
-path="res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"
+uid="uid://b78mnr6htkenu"
+path="res://.godot/imported/Desappear (44x30).png-f72d8cc3141b3737bbb7e47a038fc66f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Enemies/Old/grrrrrrrr.png"
-dest_files=["res://.godot/imported/grrrrrrrr.png-1d3ff5284ab7ae3a9da7337141c61534.ctex"]
+source_file="res://sprites/Enemies/Ghost/Desappear (44x30).png"
+dest_files=["res://.godot/imported/Desappear (44x30).png-f72d8cc3141b3737bbb7e47a038fc66f.ctex"]
 
 [params]
 
