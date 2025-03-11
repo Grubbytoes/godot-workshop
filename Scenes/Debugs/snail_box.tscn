@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=4 uid="uid://c5xevoj5wvy7w"]
+
+[ext_resource type="PackedScene" uid="uid://c6prpskefvrdr" path="res://Scenes/Prefabs/tiles.tscn" id="1_dacb1"]
+[ext_resource type="PackedScene" uid="uid://dsscqq38hluiq" path="res://Scenes/Prefabs/enemy_snail.tscn" id="2_urbxt"]
+
+[node name="SnailBox" type="Node2D"]
+texture_filter = 1
+
+[node name="Tiles" parent="." instance=ExtResource("1_dacb1")]
+tile_map_data = PackedByteArray("AAAAAAMAAAANAAQAAAABAAMAAAANAAQAAAACAAMAAAAOAAQAAAACAAQAAAAMAAUAAAACAAgAAAANAAQAAAADAAgAAAANAAQAAAAEAAgAAAANAAQAAAAFAAcAAAAMAAUAAAAFAAgAAAAOAAQAAAD6/wcAAAAMAAUAAAD6/wgAAAAMAAQAAAD7/wgAAAANAAQAAAD8/wgAAAANAAQAAAD9/wgAAAANAAQAAAD+/wgAAAANAAQAAAD//wgAAAANAAQAAAAAAAgAAAANAAQAAAABAAgAAAANAAQAAAD9/wMAAAANAAQAAAD7/wIAAAAMAAUAAAD7/wMAAAAMAAQAAAD8/wMAAAANAAQAAAD+/wMAAAANAAQAAAD//wMAAAANAAQAAAA=")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 64)
+zoom = Vector2(4, 4)
+
+[node name="EnemySnail" parent="." instance=ExtResource("2_urbxt")]
+position = Vector2(8, 32)
