@@ -1,14 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://b47iobt2pfncm"]
+[gd_scene load_steps=4 format=4 uid="uid://c6prpskefvrdr"]
 
-[ext_resource type="Texture2D" uid="uid://mek7wesuqm7w" path="res://sprites/Terrain/Terrain (16x16).png" id="1_lvyvg"]
-[ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="2_bsrre"]
-[ext_resource type="PackedScene" uid="uid://cbadpp6mi030x" path="res://Scenes/Prefabs/collectable_watermelon.tscn" id="3_hcxbc"]
-[ext_resource type="PackedScene" uid="uid://d1ay7tq6rx2j8" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_s6knh"]
-[ext_resource type="PackedScene" uid="uid://crp44oyse0qia" path="res://Scenes/Prefabs/parallax_background.tscn" id="5_bmkvm"]
-[ext_resource type="PackedScene" uid="uid://dsscqq38hluiq" path="res://Scenes/Prefabs/enemy_snail.tscn" id="6_s5iip"]
+[ext_resource type="Texture2D" uid="uid://mek7wesuqm7w" path="res://sprites/Terrain/Terrain (16x16).png" id="1_2dkdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cviv"]
-texture = ExtResource("1_lvyvg")
+texture = ExtResource("1_2dkdu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -350,29 +345,6 @@ terrain_set_0/terrain_0/name = "Grass 0"
 terrain_set_0/terrain_0/color = Color(0.501961, 0.831373, 0.25098, 1)
 sources/0 = SubResource("TileSetAtlasSource_2cviv")
 
-[node name="Scene" type="Node2D"]
-texture_filter = 1
-
-[node name="Player" parent="." instance=ExtResource("2_bsrre")]
-position = Vector2(127, 112)
-
-[node name="Cam" type="Camera2D" parent="Player"]
-zoom = Vector2(4, 4)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-drag_vertical_offset = -0.5
-
-[node name="Tiles" type="TileMapLayer" parent="."]
+[node name="Tiles" type="TileMapLayer"]
 tile_map_data = PackedByteArray("AAANAAgAAAAHAAAAAAAOAAgAAAAKAAEAAAAPAAgAAAAIAAEAAAAPAAkAAAAIAAEAAAAOAAkAAAAHAAEAAAANAAkAAAAHAAEAAAAOAAYAAAAKAAAAAAAOAAcAAAAGAAEAAAAPAAcAAAAIAAEAAAAPAAYAAAAIAAEAAAANAAYAAAAGAAIAAAANAAUAAAAGAAAAAAAOAAUAAAAKAAEAAAAPAAUAAAAIAAEAAAAMAAgAAAAGAAAAAAAMAAkAAAAKAAEAAAAPAAQAAAAIAAAAAAAOAAQAAAAGAAAAAAALAAkAAAAHAAAAAAAKAAkAAAAHAAAAAAAJAAkAAAAHAAAAAAAIAAkAAAAHAAAAAAAHAAkAAAAHAAAAAAAGAAkAAAAHAAAAAAALAAoAAAAHAAIAAAAMAAoAAAAHAAIAAAAKAAoAAAAHAAIAAAAJAAoAAAAHAAIAAAAIAAoAAAAHAAIAAAAHAAoAAAAHAAIAAAAGAAoAAAAHAAIAAAANAAoAAAAHAAIAAAAOAAoAAAAHAAIAAAAPAAoAAAAIAAIAAAAFAAoAAAAHAAIAAAAFAAkAAAAHAAAAAAAEAAkAAAAHAAAAAAADAAkAAAAHAAAAAAADAAoAAAAHAAIAAAAEAAoAAAAHAAIAAAACAAkAAAAHAAAAAAABAAkAAAAHAAAAAAAAAAkAAAAHAAAAAAD//wkAAAAHAAAAAAD+/wkAAAAHAAAAAAD9/wkAAAAHAAAAAAD8/wkAAAAHAAAAAAD7/wkAAAAHAAAAAAD6/wkAAAAHAAAAAAD5/wkAAAAHAAAAAAD7/woAAAAHAAIAAAD8/woAAAAHAAIAAAD9/woAAAAHAAIAAAD+/woAAAAHAAIAAAD//woAAAAHAAIAAAAAAAoAAAAHAAIAAAABAAoAAAAHAAIAAAACAAoAAAAHAAIAAAD5/woAAAAHAAIAAAD6/woAAAAHAAIAAAD4/wkAAAAHAAAAAAD4/woAAAAHAAIAAAD3/woAAAAHAAIAAAD2/woAAAAHAAIAAAD1/woAAAAHAAIAAAD1/wkAAAAHAAAAAAD0/wkAAAAHAAAAAAD2/wkAAAAHAAAAAAD3/wkAAAAHAAAAAADz/wkAAAAHAAAAAADy/wkAAAAHAAAAAADy/woAAAAHAAIAAADz/woAAAAHAAIAAAD0/woAAAAHAAIAAADx/wkAAAAHAAAAAADw/wkAAAAHAAAAAADv/wkAAAAHAAAAAADu/wkAAAAHAAAAAADt/wkAAAAHAAAAAADs/wkAAAAHAAAAAADr/wkAAAAHAAAAAADq/wkAAAAHAAAAAADp/wkAAAAHAAAAAADo/wkAAAAHAAAAAADn/wkAAAAHAAAAAADm/wkAAAAHAAAAAADl/wkAAAAHAAAAAADk/wkAAAAHAAAAAADj/wkAAAAHAAAAAADi/wkAAAAHAAAAAADh/wkAAAAHAAAAAADg/wkAAAAHAAAAAADf/wkAAAAHAAAAAADe/wkAAAAHAAAAAADd/wkAAAAHAAAAAADd/woAAAAHAAIAAADe/woAAAAHAAIAAADf/woAAAAHAAIAAADg/woAAAAHAAIAAADh/woAAAAHAAIAAADi/woAAAAHAAIAAADj/woAAAAHAAIAAADk/woAAAAHAAIAAADl/woAAAAHAAIAAADm/woAAAAHAAIAAADn/woAAAAHAAIAAADo/woAAAAHAAIAAADp/woAAAAHAAIAAADq/woAAAAHAAIAAADr/woAAAAHAAIAAADs/woAAAAHAAIAAADt/woAAAAHAAIAAADu/woAAAAHAAIAAADv/woAAAAHAAIAAADw/woAAAAHAAIAAADx/woAAAAHAAIAAADb/wkAAAAHAAAAAADc/wkAAAAHAAAAAADa/wkAAAAHAAAAAADZ/wkAAAAHAAAAAADY/wkAAAAHAAAAAADX/wkAAAAHAAAAAADW/wkAAAAHAAAAAADV/wkAAAAHAAAAAADU/wkAAAAHAAAAAADT/wkAAAAHAAAAAADS/wkAAAAHAAAAAADR/wkAAAAHAAAAAADQ/wkAAAAGAAAAAADR/woAAAAHAAIAAADS/woAAAAHAAIAAADT/woAAAAHAAIAAADU/woAAAAHAAIAAADV/woAAAAHAAIAAADW/woAAAAHAAIAAADX/woAAAAHAAIAAADY/woAAAAHAAIAAADZ/woAAAAHAAIAAADa/woAAAAHAAIAAADb/woAAAAHAAIAAADc/woAAAAHAAIAAADQ/woAAAAGAAIAAAD4/wYAAAAMAAUAAAD5/wYAAAAMAAUAAAD6/wYAAAAMAAUAAAD7/wYAAAAMAAUAAAD8/wYAAAAMAAUAAAD9/wYAAAAMAAUAAAD9/wcAAAAMAAUAAAD3/wYAAAAMAAUAAAD3/wUAAAAMAAUAAAA=")
 tile_set = SubResource("TileSet_igttg")
-
-[node name="CollectableWatermelon" parent="." instance=ExtResource("3_s6knh")]
-position = Vector2(64, 120)
-
-[node name="CollectableWatermelon2" parent="." instance=ExtResource("3_hcxbc")]
-position = Vector2(32, 96)
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("5_bmkvm")]
-
-[node name="EnemySnail" parent="." instance=ExtResource("6_s5iip")]
-position = Vector2(-56, 80)
