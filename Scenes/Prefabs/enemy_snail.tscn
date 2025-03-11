@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dsscqq38hluiq"]
+[gd_scene load_steps=16 format=3 uid="uid://dsscqq38hluiq"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_snail.gd" id="1_7adti"]
 [ext_resource type="Texture2D" uid="uid://dx8qmug8c47t0" path="res://sprites/Enemies/Snail/Walk (38x24).png" id="2_60eg4"]
@@ -83,7 +83,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nsl2i"]
 
-[node name="EnemySnail" type="CharacterBody2D"]
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_npy6i"]
+length = 24.0
+
+[node name="EnemySnail" type="CharacterBody2D" groups=["player_hurt"]]
 script = ExtResource("1_7adti")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -94,3 +97,12 @@ frame_progress = 0.147066
 position = Vector2(0, 2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_nsl2i")
+
+[node name="LineOfSight" type="Area2D" parent="."]
+position = Vector2(0, 2)
+
+[node name="Ray" type="CollisionShape2D" parent="LineOfSight"]
+rotation = 1.5708
+shape = SubResource("SeparationRayShape2D_npy6i")
+
+[connection signal="body_entered" from="LineOfSight" to="." method="body_entered_sight"]
