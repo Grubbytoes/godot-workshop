@@ -1,11 +1,30 @@
-[gd_scene load_steps=9 format=4 uid="uid://b47iobt2pfncm"]
+[gd_scene load_steps=13 format=4 uid="uid://b47iobt2pfncm"]
 
-[ext_resource type="PackedScene" uid="uid://evbgeim0ppx4" path="res://Scenes/Prefabs/enemy.tscn" id="1_aqa20"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_iw2he"]
+[ext_resource type="Texture2D" uid="uid://bgw78hojv2idr" path="res://sprites/Enemies/grrrrrrrr.png" id="1_kvq4h"]
 [ext_resource type="Texture2D" uid="uid://mek7wesuqm7w" path="res://sprites/Terrain/Terrain (16x16).png" id="1_lvyvg"]
 [ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="2_bsrre"]
 [ext_resource type="PackedScene" uid="uid://cbadpp6mi030x" path="res://Scenes/Prefabs/collectable_watermelon.tscn" id="3_hcxbc"]
 [ext_resource type="PackedScene" uid="uid://d1ay7tq6rx2j8" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_s6knh"]
 [ext_resource type="Texture2D" uid="uid://dx14vmwucbivh" path="res://sprites/Background/Green.png" id="5_yg71s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtjnx"]
+atlas = ExtResource("1_kvq4h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yy6jb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtjnx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_al2dv"]
+size = Vector2(22, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cviv"]
 texture = ExtResource("1_lvyvg")
@@ -255,7 +274,16 @@ sources/0 = SubResource("TileSetAtlasSource_2cviv")
 [node name="Scene" type="Node2D"]
 texture_filter = 1
 
-[node name="Enemy" parent="." instance=ExtResource("1_aqa20")]
+[node name="Enemy" type="CharacterBody2D" parent="."]
+position = Vector2(-136, 126)
+script = ExtResource("1_iw2he")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Enemy"]
+sprite_frames = SubResource("SpriteFrames_yy6jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("RectangleShape2D_al2dv")
 
 [node name="Player" parent="." instance=ExtResource("2_bsrre")]
 position = Vector2(127, 112)
@@ -281,7 +309,6 @@ position = Vector2(32, 96)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.8, 0.8)
 motion_mirroring = Vector2(320, 320)
-metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 offset_right = 320.0

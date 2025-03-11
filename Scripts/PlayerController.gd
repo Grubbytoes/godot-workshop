@@ -1,14 +1,16 @@
-extends CharacterBody2D
+extends StandardCharacter
 
 const PLAYER_MOVE_SPEED = 120
 const PLAYER_JUMP_FORCE = 250
 
 var move_dir: Vector2 
+var jump_count: int
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 func _ready():
 	sprite.play("idle")
+	jump_count = 2
 
 func _physics_process(delta):
 	move_dir = Vector2.ZERO
@@ -29,11 +31,11 @@ func _physics_process(delta):
 	velocity.x = clamp(velocity.x, -PLAYER_MOVE_SPEED, PLAYER_MOVE_SPEED)
 
 	# Jumping
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_up") and can_jump():
 		velocity.y -= PLAYER_JUMP_FORCE	
 	
 	# Gravity
-	velocity.y += 500 * delta
+	apply_gravity(delta)
 
 	# Drag
 	if move_dir.x == 0:
@@ -43,3 +45,21 @@ func _physics_process(delta):
 			velocity.x = 0
 	
 	move_and_slide()
+
+func can_jump():
+	if is_on_floor():
+		jump_count = 2
+	
+	if 0 < jump_count:
+		jump_count -= 1
+		return true
+	else:
+		return false
+
+func hitbox_enter(other):
+	if other.is_in_group("player_hurt"):
+		die()
+
+func die():
+	print("Player dying")
+	super.die()

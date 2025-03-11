@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://fh7fiewb7x8i"]
+[gd_scene load_steps=30 format=3 uid="uid://fh7fiewb7x8i"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_36mi8"]
 [ext_resource type="Texture2D" uid="uid://58r8jwp6tkk8" path="res://sprites/Main Characters/Pink Man/Idle (32x32).png" id="2_bnp0o"]
@@ -181,6 +181,10 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6stec"]
+radius = 12.0
+height = 28.0
+
 [node name="Player" type="CharacterBody2D" groups=["player_pickup"]]
 texture_filter = 3
 position = Vector2(-1, 0)
@@ -196,3 +200,12 @@ position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_6i3eo")
 animation = &"idle"
 frame_progress = 0.273474
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_6stec")
+debug_color = Color(0.950789, 0.223382, 5.77569e-07, 0.42)
+
+[connection signal="body_entered" from="Hitbox" to="." method="hitbox_enter"]

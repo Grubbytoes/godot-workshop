@@ -1,4 +1,4 @@
-class_name node
+class_name Collectable
 extends Node2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
