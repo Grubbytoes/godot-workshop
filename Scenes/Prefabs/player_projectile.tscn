@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://o5dbm1jetyrk"]
+
+[ext_resource type="Script" path="res://Scripts/player_projectile.gd" id="1_og6do"]
+[ext_resource type="Texture2D" uid="uid://8k7d6w8mayf7" path="res://sprites/Items/Fruits/Apple.png" id="1_tmo40"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhade"]
+radius = 6.0
+
+[node name="Projectile" type="Node2D" groups=["player_projectile", "playuer_projectile"]]
+script = ExtResource("1_og6do")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmo40")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Hitbox" type="Area2D" parent="Sprite" groups=["player_projectile"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Hitbox"]
+shape = SubResource("CircleShape2D_fhade")

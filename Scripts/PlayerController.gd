@@ -4,7 +4,10 @@ const PLAYER_MOVE_SPEED = 120
 const PLAYER_JUMP_FORCE = 250
 
 var jump_count: int
-var move_dir: Vector2 
+var move_dir: Vector2
+var face_dir: Vector2
+
+var projectile_scene := load("res://Scenes/Prefabs/player_projectile.tscn")
 
 func _ready():
 	sprite.play("idle")
@@ -33,6 +36,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_up") and can_jump():
 		velocity.y -= PLAYER_JUMP_FORCE	
 	
+	# listening for shooting call
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+	
 	# Gravity
 	apply_gravity(delta)
 
@@ -44,6 +51,8 @@ func _physics_process(delta):
 			velocity.x = 0
 	
 	move_and_slide()
+	if 0 < velocity.length():
+		face_dir = velocity.normalized()
 
 
 func can_jump():
@@ -60,6 +69,12 @@ func can_jump():
 func hitbox_enter(other):
 	if other.is_in_group("player_hurt"):
 		die()
+
+
+func shoot():
+	var new_projectile = projectile_scene.instantiate()
+	add_sibling(new_projectile)
+	new_projectile.launch(self.position, face_dir)
 
 
 func die():

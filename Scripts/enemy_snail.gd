@@ -40,3 +40,10 @@ func turn():
 
 func body_entered_sight(body):
 	turn()
+
+
+func hitbox_enter(other):
+	if not other.is_in_group("player_projectile"):
+		return
+	
+	die()
