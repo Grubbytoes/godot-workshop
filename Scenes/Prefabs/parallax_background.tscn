@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://crp44oyse0qia"]
+
+[ext_resource type="Texture2D" uid="uid://dx14vmwucbivh" path="res://sprites/Background/Green.png" id="1_8yyij"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(320, 320)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_right = 320.0
+offset_bottom = 320.0
+texture = ExtResource("1_8yyij")
+stretch_mode = 1

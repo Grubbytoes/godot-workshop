@@ -3,14 +3,13 @@ extends StandardCharacter
 const PLAYER_MOVE_SPEED = 120
 const PLAYER_JUMP_FORCE = 250
 
-var move_dir: Vector2 
 var jump_count: int
-
-@onready var sprite: AnimatedSprite2D = $Sprite
+var move_dir: Vector2 
 
 func _ready():
 	sprite.play("idle")
 	jump_count = 2
+
 
 func _physics_process(delta):
 	move_dir = Vector2.ZERO
@@ -46,6 +45,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+
 func can_jump():
 	if is_on_floor():
 		jump_count = 2
@@ -56,9 +56,11 @@ func can_jump():
 	else:
 		return false
 
+
 func hitbox_enter(other):
 	if other.is_in_group("player_hurt"):
 		die()
+
 
 func die():
 	print("Player dying")
