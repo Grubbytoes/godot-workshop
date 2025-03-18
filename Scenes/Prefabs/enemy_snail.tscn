@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://dsscqq38hluiq"]
 
-[ext_resource type="Script" path="res://Scripts/enemy_snail.gd" id="1_7adti"]
+[ext_resource type="Script" uid="uid://j0ha4ru8p0m8" path="res://Scripts/enemy_snail.gd" id="1_7adti"]
 [ext_resource type="Texture2D" uid="uid://dx8qmug8c47t0" path="res://sprites/Enemies/Snail/Walk (38x24).png" id="2_60eg4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8v0lo"]

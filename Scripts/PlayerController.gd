@@ -7,11 +7,17 @@ var jump_count: int
 var move_dir: Vector2
 var face_dir: Vector2
 
+@export var lives:int = 3
+@export var respawn_position:Node2D
+@export var lives_label:Label
+@export var collectable_label:Label
 var projectile_scene := load("res://Scenes/Prefabs/player_projectile.tscn")
+var fruit_count = 0
 
 func _ready():
 	sprite.play("idle")
 	jump_count = 2
+	lives_label.text = ("Lives: " + str(lives))
 
 
 func _physics_process(delta):
@@ -65,6 +71,10 @@ func can_jump():
 	else:
 		return false
 
+func collectable_pickup():
+	fruit_count += 1
+	collectable_label.text = "Fruit: " + str(fruit_count)
+	
 
 func hitbox_enter(other):
 	if other.is_in_group("player_hurt"):
@@ -78,5 +88,19 @@ func shoot():
 
 
 func die():
+	if lives <= 0:
+		true_die()
+	else:
+		respawn()
+	
+func respawn():
+	create_poof()
+	position = respawn_position.position
+	lives -= 1
+	lives_label.text = ("Lives: " + str(lives))
+	
+
+func true_die():
 	print("Player dying")
+	get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
 	super.die()

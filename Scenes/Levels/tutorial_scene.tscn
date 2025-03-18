@@ -1,15 +1,35 @@
-[gd_scene load_steps=8 format=4 uid="uid://b47iobt2pfncm"]
+[gd_scene load_steps=16 format=4 uid="uid://b47iobt2pfncm"]
 
-[ext_resource type="Script" path="res://Scripts/cam_logic.gd" id="1_lcubh"]
+[ext_resource type="Script" uid="uid://dcf2e5lb2vm6p" path="res://Scripts/cam_logic.gd" id="1_lcubh"]
 [ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="1_r7buj"]
 [ext_resource type="PackedScene" uid="uid://c6prpskefvrdr" path="res://Scenes/Prefabs/tiles.tscn" id="2_hx61g"]
 [ext_resource type="PackedScene" uid="uid://d1ay7tq6rx2j8" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_xdbb8"]
 [ext_resource type="PackedScene" uid="uid://cbadpp6mi030x" path="res://Scenes/Prefabs/collectable_watermelon.tscn" id="4_gbbpm"]
 [ext_resource type="PackedScene" uid="uid://crp44oyse0qia" path="res://Scenes/Prefabs/parallax_background.tscn" id="5_gg5gb"]
 [ext_resource type="PackedScene" uid="uid://dsscqq38hluiq" path="res://Scenes/Prefabs/enemy_snail.tscn" id="6_yqea0"]
+[ext_resource type="PackedScene" uid="uid://c8epn8j3ls5vk" path="res://Scenes/Prefabs/poof.tscn" id="8_rwfmk"]
+[ext_resource type="Texture2D" uid="uid://cvhxdjuuv6a6w" path="res://sprites/Main Characters/Pink Man/Jump (32x32).png" id="9_fm13l"]
+[ext_resource type="Texture2D" uid="uid://8k7d6w8mayf7" path="res://sprites/Items/Fruits/Apple.png" id="10_j4wex"]
+[ext_resource type="FontFile" uid="uid://bcxtyp60kd5fa" path="res://fonts/optimusprinceps/OptimusPrinceps.ttf" id="11_nlodl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4wex"]
+texture = ExtResource("9_fm13l")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nlodl"]
+font = ExtResource("11_nlodl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlodl"]
+texture = ExtResource("10_j4wex")
+region_rect = Rect2(0, 0, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4xckt"]
+font = ExtResource("11_nlodl")
 
 [node name="Scene" type="Node2D"]
 texture_filter = 1
+
+[node name="respawn_position" type="Node2D" parent="."]
+position = Vector2(-22, 66)
 
 [node name="Cam" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 position = Vector2(127, 112)
@@ -20,8 +40,12 @@ drag_vertical_offset = -0.5
 script = ExtResource("1_lcubh")
 target = NodePath("../Player")
 
-[node name="Player" parent="." instance=ExtResource("1_r7buj")]
+[node name="Player" parent="." node_paths=PackedStringArray("respawn_position", "lives_label", "collectable_label") instance=ExtResource("1_r7buj")]
+unique_name_in_owner = true
 position = Vector2(127, 112)
+respawn_position = NodePath("../respawn_position")
+lives_label = NodePath("../CanvasLayer/Control/Lives_counter/Lives")
+collectable_label = NodePath("../CanvasLayer/Control/Fruit_counter/fruit_label")
 
 [node name="Tiles" parent="." instance=ExtResource("2_hx61g")]
 tile_map_data = PackedByteArray("AAAAAAkAAAAHAAAAAAABAAkAAAAHAAAAAAACAAkAAAAHAAAAAAADAAkAAAAHAAAAAAAEAAkAAAAHAAAAAAAFAAkAAAAHAAAAAAAGAAkAAAAHAAAAAAAHAAkAAAAHAAAAAAAIAAkAAAAHAAAAAAAJAAkAAAAHAAAAAAAKAAkAAAAHAAAAAAALAAkAAAAHAAAAAAALAAoAAAAHAAEAAAALAAsAAAAHAAEAAAALAAwAAAAHAAIAAAAKAAwAAAAHAAIAAAAJAAwAAAAHAAIAAAAIAAwAAAAHAAIAAAAHAAwAAAAHAAIAAAAGAAwAAAAHAAIAAAAFAAwAAAAHAAIAAAAEAAwAAAAHAAIAAAADAAwAAAAHAAIAAAACAAwAAAAHAAIAAAABAAwAAAAHAAIAAAAAAAwAAAAHAAIAAAAAAAsAAAAHAAEAAAAAAAoAAAAHAAEAAAAIAAoAAAAHAAEAAAAIAAsAAAAHAAEAAAAHAAsAAAAHAAEAAAAGAAsAAAAHAAEAAAAFAAsAAAAHAAEAAAAEAAsAAAAHAAEAAAAHAAoAAAAHAAEAAAAGAAoAAAAHAAEAAAAFAAoAAAAHAAEAAAAEAAoAAAAHAAEAAAADAAoAAAAHAAEAAAADAAsAAAAHAAEAAAACAAoAAAAHAAEAAAACAAsAAAAHAAEAAAABAAoAAAAHAAEAAAAKAAsAAAAHAAEAAAAKAAoAAAAHAAEAAAAJAAsAAAAHAAEAAAAJAAoAAAAHAAEAAAABAAsAAAAHAAEAAAAOAAwAAAAHAAIAAAAOAAsAAAAHAAEAAAAOAAoAAAAHAAEAAAAOAAkAAAAHAAAAAAANAAwAAAAHAAIAAAANAAsAAAAHAAEAAAANAAoAAAAHAAEAAAANAAkAAAAHAAAAAAAMAAwAAAAHAAIAAAAMAAsAAAAHAAEAAAAMAAoAAAAHAAEAAAAMAAkAAAAHAAAAAAD//wwAAAAHAAIAAAD//wsAAAAHAAEAAAD//woAAAAHAAEAAAD//wkAAAAJAAEAAAD//wgAAAAIAAEAAAD//wcAAAAIAAEAAAD//wYAAAAIAAAAAAD+/wwAAAAHAAIAAAD+/wsAAAAHAAEAAAD+/woAAAAHAAEAAAD+/wkAAAAHAAEAAAD+/wgAAAAHAAEAAAD+/wcAAAAHAAEAAAD+/wYAAAAHAAAAAAD9/wwAAAAGAAIAAAD9/wsAAAAGAAEAAAD9/woAAAAGAAEAAAD9/wkAAAAGAAEAAAD9/wgAAAAGAAEAAAD9/wcAAAAGAAEAAAD9/wYAAAAGAAAAAAARAAwAAAAIAAIAAAARAAsAAAAIAAEAAAARAAoAAAAIAAEAAAARAAkAAAAIAAEAAAARAAgAAAAIAAEAAAARAAcAAAAIAAEAAAARAAYAAAAIAAAAAAAQAAwAAAAHAAIAAAAQAAsAAAAHAAEAAAAQAAoAAAAHAAEAAAAQAAkAAAAHAAEAAAAQAAgAAAAHAAEAAAAQAAcAAAAHAAEAAAAQAAYAAAAHAAAAAAAPAAwAAAAHAAIAAAAPAAsAAAAHAAEAAAAPAAoAAAAHAAEAAAAPAAkAAAAKAAEAAAAPAAgAAAAGAAEAAAAPAAcAAAAGAAEAAAAPAAYAAAAGAAAAAAA=")
@@ -36,3 +60,57 @@ position = Vector2(40, 120)
 
 [node name="EnemySnail" parent="." instance=ExtResource("6_yqea0")]
 position = Vector2(256, 80)
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("8_rwfmk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lives_counter" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player_sprite" type="Panel" parent="CanvasLayer/Control/Lives_counter"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j4wex")
+
+[node name="Lives" type="Label" parent="CanvasLayer/Control/Lives_counter"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 11.0
+offset_right = 78.0
+offset_bottom = 60.0
+text = "3
+"
+label_settings = SubResource("LabelSettings_nlodl")
+
+[node name="Fruit_counter" type="Control" parent="CanvasLayer/Control"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 41.0
+offset_bottom = 79.0
+
+[node name="Fruit_sprite" type="Panel" parent="CanvasLayer/Control/Fruit_counter"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlodl")
+
+[node name="fruit_label" type="Label" parent="CanvasLayer/Control/Fruit_counter"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 11.0
+offset_right = 78.0
+offset_bottom = 60.0
+text = "Fruit: 0
+"
+label_settings = SubResource("LabelSettings_4xckt")
