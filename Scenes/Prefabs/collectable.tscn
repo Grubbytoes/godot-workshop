@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://dv81srj7ef86g"]
 
-[ext_resource type="Script" path="res://Scripts/collectable.gd" id="1_kgdeq"]
+[ext_resource type="Script" uid="uid://b44f1ugsc578c" path="res://Scripts/collectable.gd" id="1_kgdeq"]
 [ext_resource type="Texture2D" uid="uid://mo8ay25763hv" path="res://sprites/Items/Fruits/Collected.png" id="1_kif2s"]
 [ext_resource type="Texture2D" uid="uid://bnjhvmxkymg4k" path="res://sprites/Items/Fruits/Orange.png" id="2_afoub"]
 

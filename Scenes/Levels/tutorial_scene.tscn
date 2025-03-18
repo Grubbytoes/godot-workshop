@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://b47iobt2pfncm"]
 
-[ext_resource type="Script" path="res://Scripts/cam_logic.gd" id="1_lcubh"]
+[ext_resource type="Script" uid="uid://dcf2e5lb2vm6p" path="res://Scripts/cam_logic.gd" id="1_lcubh"]
 [ext_resource type="PackedScene" uid="uid://fh7fiewb7x8i" path="res://Scenes/Prefabs/player.tscn" id="1_r7buj"]
 [ext_resource type="PackedScene" uid="uid://c6prpskefvrdr" path="res://Scenes/Prefabs/tiles.tscn" id="2_hx61g"]
 [ext_resource type="PackedScene" uid="uid://d1ay7tq6rx2j8" path="res://Scenes/Prefabs/collectable_banana.tscn" id="3_xdbb8"]

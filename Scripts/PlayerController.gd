@@ -17,6 +17,10 @@ func _ready():
 func _physics_process(delta):
 	move_dir = Vector2.ZERO
 	
+	#exit
+	if Input.is_action_just_pressed("escape"):
+		get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
+	
 	# left right movement
 	if Input.is_action_pressed("ui_left"):
 		move_dir.x += -1
@@ -80,3 +84,4 @@ func shoot():
 func die():
 	print("Player dying")
 	super.die()
+	get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
