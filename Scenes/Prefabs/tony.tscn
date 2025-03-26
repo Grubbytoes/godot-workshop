@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgovwgdrolgmc"]
+
+[ext_resource type="Script" uid="uid://bstd7xebg3yoi" path="res://Scripts/StandardBoss.gd" id="1_oen0p"]
+[ext_resource type="Texture2D" uid="uid://chyolcpx5edp7" path="res://sprites/Enemies/Big Tony/bigtony.png" id="2_oen0p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oen0p"]
+size = Vector2(110, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w534f"]
+size = Vector2(110, 100)
+
+[node name="Tony" type="CharacterBody2D" node_paths=PackedStringArray("health_bar")]
+script = ExtResource("1_oen0p")
+health_bar = NodePath("ProgressBar")
+healthPoints = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_oen0p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_oen0p")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -66.0
+offset_right = 33.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+max_value = 10.0
+value = 10.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_w534f")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-61, 48)
+target_position = Vector2(-71, 0)
+
+[connection signal="area_entered" from="Area2D" to="." method="hitbox_enter"]
