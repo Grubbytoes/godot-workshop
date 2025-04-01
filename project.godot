@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Godot Workshop 2025"
-run/main_scene="uid://bau135ynf31jf"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="res://Scenes/Menus/main_menu.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://Sprites/icon.svg"
 
 [dotnet]

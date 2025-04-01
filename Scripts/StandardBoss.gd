@@ -1,23 +1,31 @@
 extends StandardCharacter
 
+enum STATE {NORMAL, JUMP, SLAM}
+
 const MOVE_SPEED = 40
 
 var x_dir: int
 
 @export var health_bar:ProgressBar
-@onready var line_of_sight = $LineOfSight
+@onready var line_of_sight: RayCast2D = $LineOfSight
+
+var state: STATE
+
 
 func _ready():
 	x_dir = -1
-	#sprite.play("default")
+	change_state("normal")
 
 
 func _physics_process(delta):
 
-	apply_gravity(delta)
+	if line_of_sight.get_collider() != null: turn()
+
+	if state != STATE.JUMP: apply_gravity(delta)
+
+	if state == STATE.SLAM and is_on_floor(): change_state("normal")
 
 	do_move()
-
 	move_and_slide()
 
 
@@ -39,14 +47,26 @@ func turn():
 		sprite.flip_h = false
 
 
-func body_entered_sight(body):
-	turn()
-
-
 func hitbox_enter(other):
 	if not other.is_in_group("player_projectile"):
 		take_damage(1)
 		update_health_bar()
-	
+
+
 func update_health_bar():
 	health_bar.value = healthPoints
+
+
+func change_state(state_name):
+	if state_name == "jump":
+		var jump_tween = get_tree().create_tween()
+		jump_tween.tween_property(self, "position", Vector2.UP * 120, 1.5).as_relative()
+		jump_tween.tween_callback(self.change_state.bind("slam"))
+		state = STATE.JUMP
+	elif state_name == "slam":
+		state = STATE.SLAM
+	else:
+		state = STATE.NORMAL
+		$Timer.wait_time = 6.0
+		$Timer.start()
+
