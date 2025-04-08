@@ -9,7 +9,7 @@ size = Vector2(96, 101)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w534f"]
 size = Vector2(110, 104)
 
-[node name="Tony" type="CharacterBody2D" node_paths=PackedStringArray("health_bar")]
+[node name="Tony" type="CharacterBody2D" node_paths=PackedStringArray("health_bar") groups=["player_hurt"]]
 script = ExtResource("1_oen0p")
 health_bar = NodePath("ProgressBar")
 healthPoints = 10

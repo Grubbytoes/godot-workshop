@@ -18,15 +18,16 @@ func _ready():
 
 
 func _physics_process(delta):
-
-	if line_of_sight.get_collider() != null: turn()
-
 	if state != STATE.JUMP: apply_gravity(delta)
-
 	if state == STATE.SLAM and is_on_floor(): change_state("normal")
 
+	check_line_of_light()
 	do_move()
 	move_and_slide()
+
+
+func check_line_of_light():
+	if line_of_sight.get_collider() != null: turn()
 
 
 func do_move():
@@ -48,7 +49,7 @@ func turn():
 
 
 func hitbox_enter(other):
-	if not other.is_in_group("player_projectile"):
+	if other.is_in_group("player_projectile"):
 		take_damage(1)
 		update_health_bar()
 
